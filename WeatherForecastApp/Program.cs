@@ -28,7 +28,6 @@ internal class Program
         services.Configure<WeatherForecastSettings>(configuration.GetSection("WeatherForecastSettings"));
 
         services.AddHttpClient<IWeatherService, WeatherService>();
-        services.AddSingleton<IWeatherService, WeatherService>();
         services.AddSingleton<IConsoleService, ConsoleService>();
       }).Build();
 
