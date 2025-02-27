@@ -67,6 +67,7 @@ namespace WeatherForecastApp.Services {
         if (data.HourlyData == null)
         {
           _logger.LogError("No weather data found");
+          _consoleService.PrintLog("No weather data found");
           return;
         }
 
@@ -76,6 +77,7 @@ namespace WeatherForecastApp.Services {
         if (index == -1) 
         {
           _logger.LogError("No future data");
+          _consoleService.PrintLog("No future data");
           return;
         }
 
